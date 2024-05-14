@@ -66,7 +66,8 @@ jobs:
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
-
+    - name: copy feeds
+      run: cd openwrt && cp -r  ./scripts/feeds/openstick/* ./scripts/feeds/packages/
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
