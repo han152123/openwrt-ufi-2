@@ -69,10 +69,7 @@ jobs:
     - name: copy feeds
       run: |
         cd openwrt 
-        mkdir ./feeds/packages/firmware
-        cp -r  ./feeds/openstick/firmware ./feeds/packages/firmware
-        cp -r  ./feeds/openstick/libs ./feeds/packages/libs
-        cp -r  ./feeds/openstick/utils ./feeds/packages/utils
+        cp .config tmp/.config;
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
