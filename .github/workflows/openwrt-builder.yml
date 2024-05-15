@@ -68,7 +68,6 @@ jobs:
       run: cd openwrt && ./scripts/feeds update -a
     - name: copy feeds
       run: |
-        cp .config tmp/.config;
         cd openwrt 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
